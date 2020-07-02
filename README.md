@@ -39,7 +39,7 @@ There are several ways to run a Spring Boot application on your local machine. O
 
 ### Application URL
 
-To monitor and manage your application
+To test application
 
 |  URL 																				|  Method |
 |-----------------------------------------------------------------------------------|---------|
@@ -54,7 +54,7 @@ To monitor and manage your application
 
 ### Actuator
 
-To monitor and manage your application
+To monitor and manage application
 
 |  URL |  Method |
 |----------|--------------|
