@@ -6,6 +6,8 @@ import org.springframework.data.rest.core.event.ValidatingRepositoryEventListene
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
 
 import com.sts.entity.Country;
+import com.sts.projection.CountryProjection;
+import com.sts.projection.StateProjection;
 import com.sts.validator.CityValidator;
 @Configuration
 public class CustomRepositoryRestConfigurerAdapter implements RepositoryRestConfigurer {
@@ -22,5 +24,8 @@ public class CustomRepositoryRestConfigurerAdapter implements RepositoryRestConf
 	@Override
 	public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
 		config.exposeIdsFor(Country.class);		
+		config.getProjectionConfiguration()
+			.addProjection(StateProjection.class)
+			.addProjection(CountryProjection.class);
 	}
 }
