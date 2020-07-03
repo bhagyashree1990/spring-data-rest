@@ -3,9 +3,9 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/education_portal
     username: root
-    password: root
+    password: root    #Since Spring boot 2, the schema is only initialized by default for embedded datasources.     #To allow loading data for all types of datasources, you have to set the following property:    #initialization-mode: ALWAYS
     hikari:      data-source-properties:        useSSL: false
-        createDatabaseIfNotExist: true	        
+        createDatabaseIfNotExist: true          
   jpa:    hibernate:      ddl-auto: update
     show-sql: true
     open-in-view: false  
