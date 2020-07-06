@@ -13,6 +13,10 @@ repositories {
 	mavenCentral()
 }
 
+ext {
+	springFoxVersion = '2.10.0'
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
@@ -22,6 +26,16 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+	
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+	implementation "io.springfox:springfox-swagger-ui:$springFoxVersion"
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
+	implementation "io.springfox:springfox-swagger2:$springFoxVersion"
+	// https://mvnrepository.com/artifact/io.springfox/springfox-data-rest
+	implementation "io.springfox:springfox-data-rest:$springFoxVersion"
+	// https://mvnrepository.com/artifact/io.springfox/springfox-bean-validators
+	implementation "io.springfox:springfox-bean-validators:$springFoxVersion"
+	
 }
 
 test {
