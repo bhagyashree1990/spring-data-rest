@@ -19674,3 +19674,16 @@ INSERT IGNORE INTO `location` (`pincode`,`city_id`,`state_id`,`country_id`) VALU
 INSERT IGNORE INTO `location` (`pincode`,`city_id`,`state_id`,`country_id`) VALUES ("855116",415,5,1);
 INSERT IGNORE INTO `location` (`pincode`,`city_id`,`state_id`,`country_id`) VALUES ("855117",415,5,1);
 */
+
+
+INSERT IGNORE INTO `role` (`description`,`name`) VALUES 
+('Admin', 'ADMIN'),
+('User', 'USER');
+
+INSERT IGNORE INTO `user` (`active`,`email`,`first_name`,`last_name`,`password`,`username`) VALUES
+(1,'bhagyashree.chavan@sts.in','Bhagyashree','Chavan','$2a$10$MXHd7TdsqagdIQAxfzA1LeUQPgsX02MrMGM6RuN0ExW2hx2/iH5J2','shree01'),
+(1,'bhagyashree.chavan90@gmail.com','Bhagyashree','Chavan','$2a$10$MXHd7TdsqagdIQAxfzA1LeUQPgsX02MrMGM6RuN0ExW2hx2/iH5J2','shree02');
+
+INSERT IGNORE INTO `user_role_mapping` (`user_id`,`role_id`) VALUES
+(1,1),
+(2,2);

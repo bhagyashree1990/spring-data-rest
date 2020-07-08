@@ -1,7 +1,5 @@
 package com.sts.config;
 
-import java.util.Collections;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,6 +7,7 @@ import org.springframework.context.annotation.Import;
 
 import springfox.bean.validators.configuration.BeanValidatorPluginsConfiguration;
 import springfox.documentation.PathProvider;
+import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -22,10 +21,15 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 @Import({ SpringDataRestConfiguration.class , BeanValidatorPluginsConfiguration.class })
 public class SpringFoxConfig {
 	
-	private static final Contact CONTACT = new Contact("Bhagyashree Chavan", "www.sts.in", "bhagyashree.chavan@sts.in");
+	private static final Contact CONTACT = new Contact("Bhagyashree Chavan", "http://www.sts.in", "bhagyashree.chavan@sts.in");
 	
-	private static final ApiInfo API_INFO=new ApiInfo("spring-data-rest", "Swagger Doc for Spring Data Rest", "1.0.0", 
-			null, CONTACT, null, null, Collections.emptyList());
+	private static final ApiInfo API_INFO= new ApiInfoBuilder()
+			.contact(CONTACT)
+			.title("spring-data-rest")
+			.description("Swagger Doc for Spring Data Rest")
+			.version("1.0.0")
+			.license("Open Source")
+			.build();
 	
 	@Value("${server.servlet.context-path}")
     private String contextPath;

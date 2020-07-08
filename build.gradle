@@ -36,6 +36,12 @@ dependencies {
 	// https://mvnrepository.com/artifact/io.springfox/springfox-bean-validators
 	implementation "io.springfox:springfox-bean-validators:$springFoxVersion"
 	
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	// https://mvnrepository.com/artifact/org.springframework.security.oauth.boot/spring-security-oauth2-autoconfigure
+	implementation 'org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.2.8.RELEASE'
+	// https://mvnrepository.com/artifact/org.springframework.security/spring-security-jwt
+	implementation 'org.springframework.security:spring-security-jwt:1.0.10.RELEASE'
+	
 }
 
 test {
