@@ -18,6 +18,9 @@ import com.sts.portal.entity.City;
 import com.sts.portal.entity.Country;
 import com.sts.portal.entity.Location;
 import com.sts.portal.entity.State;
+import com.sts.portal.projection.CityProjection;
+import com.sts.portal.projection.CountryProjection;
+import com.sts.portal.projection.StateProjection;
 
 @Configuration
 public class CustomRepositoryRestConfigurerAdapter implements RepositoryRestConfigurer {
@@ -57,7 +60,15 @@ public class CustomRepositoryRestConfigurerAdapter implements RepositoryRestConf
 	public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
 		config.exposeIdsFor(Country.class,State.class,City.class,Location.class, 
 				Course.class, CourseCategory.class,CourseContent.class);
+		/**
+		 * NOTE: 
+		 * we need to define our Projection in the same package as our models. 
+		 * if that is not the case then u need to specify the projections here
+		 */
+		config.getProjectionConfiguration()
+			.addProjection(CountryProjection.class)
+			.addProjection(StateProjection.class)
+			.addProjection(CityProjection.class);
 	}
-	
 	
 }
