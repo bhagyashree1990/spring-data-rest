@@ -1,6 +1,25 @@
 # spring-data-rest
 Spring Data Rest application
 
+1. Creating Spring Data Rest Project
+2. Creating Entities and Mappings
+3. Adding Validator 
+4. Adding Rest Description Messages 
+5. Derived JPA Query
+6. Repository Methods Exposure
+7. Serving Static Content 
+8. Projections 
+9. Excerpts
+10. Database Initialization in Spring Boot 
+11. Implement Spring Validation
+12. Using swagger with spring data rest
+
+Spring with Multiple DataSource
+1. Spring Database Configuration for datasource1
+2. Spring Database Configuration for datasource2
+3. exposeIdsFor all entities
+4. add projection and excerpt
+
 ## Built With
 
 * 	[Gradle](https://gradle.org/) - Dependency Management
