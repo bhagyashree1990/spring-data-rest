@@ -14,7 +14,7 @@ repositories {
 }
 
 ext {
-	springFoxVersion = '2.10.0'
+	springFoxVersion = '2.10.0'	
 }
 
 dependencies {
@@ -36,6 +36,8 @@ dependencies {
 	// https://mvnrepository.com/artifact/io.springfox/springfox-bean-validators
 	implementation "io.springfox:springfox-bean-validators:$springFoxVersion"
 	
+	//AOP
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
 }
 
 test {
