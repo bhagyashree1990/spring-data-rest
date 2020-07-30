@@ -20,6 +20,9 @@ Spring with Multiple DataSource
 3. exposeIdsFor all entities
 4. add projection and excerpt
 
+Spring AOP
+1. Using Logging Aspect
+
 ## Built With
 
 * 	[Gradle](https://gradle.org/) - Dependency Management
