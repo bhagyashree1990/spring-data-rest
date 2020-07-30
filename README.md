@@ -23,6 +23,13 @@ Spring with Multiple DataSource
 Spring AOP
 1. Using Logging Aspect
 
+Spring Actuators
+1. Enable web endpoints
+2. Enable shutdown
+3. Modify actuator base URL
+4. Show details Health Endpoint
+5. scheduledtasks Endpoint
+
 ## Built With
 
 * 	[Gradle](https://gradle.org/) - Dependency Management
